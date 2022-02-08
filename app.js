@@ -43,7 +43,7 @@ app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(mongoSanitize());
 
-const secret = proccess.env.SECRET || "thisshouldbeabettersecret!";
+const secret = process.env.SECRET || "thisshouldbeabettersecret!";
 
 const store = MongoStore.create({
   mongoUrl: dbUrl,
@@ -162,6 +162,7 @@ app.use((err, req, res, next) => {
   res.status(statusCode).render("error", { err });
 });
 
-app.listen(3000, () => {
-  console.log("Serving on port 3000");
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Serving on port ${port}`);
 });
