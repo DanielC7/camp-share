@@ -169,7 +169,12 @@
           <% } %>
         </div>
       </div>
-      <% } %>
+      <% } %> <% if(!currentUser) {%>
+      <p style="color: red">
+        <a href="/login" style="color: red"><strong>Login</strong></a>
+        to leave a review/rating
+      </p>
+      <% }%>
     </div>
   </div>
 </main>

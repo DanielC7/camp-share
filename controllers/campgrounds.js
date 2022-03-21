@@ -21,7 +21,7 @@ module.exports.createCampground = async (req, res, next) => {
     })
     .send();
   // res.send(geoData.body.features[0].geometry.coordinates);
-  const campground = new Campground(req.body.campground);
+  const campground = new Campground(req.body.campground); // Got from form
   campground.geometry = geoData.body.features[0].geometry; // Add geometry which is coming from out geocoding api
   // Add file URLs that came back from cloudinary
   campground.images = req.files.map((f) => ({
