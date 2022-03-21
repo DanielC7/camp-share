@@ -86,7 +86,6 @@ const scriptSrcUrls = [
 ];
 const styleSrcUrls = [
   "https://kit-free.fontawesome.com/",
-  "https://cdn.jsdelivr.net",
   "https://api.mapbox.com/",
   "https://api.tiles.mapbox.com/",
   "https://fonts.googleapis.com/",
@@ -95,13 +94,14 @@ const styleSrcUrls = [
   "https://res.cloudinary.com/dg7xdnnt0/",
 ];
 const connectSrcUrls = [
+  "https://api.coingecko.com/",
   "https://api.mapbox.com/",
   "https://a.tiles.mapbox.com/",
   "https://b.tiles.mapbox.com/",
   "https://events.mapbox.com/",
   "https://res.cloudinary.com/dg7xdnnt0/",
 ];
-const fontSrcUrls = [];
+const fontSrcUrls = ["https://cdn.jsdelivr.net"];
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
@@ -114,6 +114,7 @@ app.use(
         ...scriptSrcUrls,
       ],
       styleSrc: ["'self'", "'unsafe-inline'", ...styleSrcUrls],
+      fontSrc: ["'self'"],
       workerSrc: ["'self'", "blob:"],
       objectSrc: [],
       imgSrc: [

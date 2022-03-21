@@ -1,9 +1,59 @@
+a {
+  text-decoration: none;
+}
+
 #cluster-map {
-  width: 100%;
-  height: 500px;
+  width: 75%;
+  height: 700px;
 }
 
 #map {
   width: 100%;
   height: 300px;
+}
+
+.mapboxgl-popup-content {
+  /* width: 380px; */
+}
+
+.card-image {
+  height: 150px;
+  width: 100%;
+}
+
+.carousel-item {
+  /* height: 500px; */
+}
+
+.container {
+  /* margin-right: 0; */
+  /* margin-left: 0; */
+}
+
+.dark-green {
+  background-color: #004b3f;
+}
+
+.camp-card:hover {
+  /* background-color: aquamarine; */
+  opacity: 0.8;
+}
+
+.why-camp-wrap {
+  /* padding: 300px; */
+  /* opacity: 0.8; */
+  height: 800px;
+  background-image: url(https://images.unsplash.com/photo-1563299796-17596ed6b017?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80);
+  background-position: center center;
+  background-size: cover;
+}
+
+.why-camp {
+  width: 45%;
+  background-color: rgba(45, 43, 46, 0.63);
+  /* height: 300px; */
+}
+
+.footer-top {
+  min-height: 100px;
 }
