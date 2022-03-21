@@ -1,8 +1,8 @@
 <% layout('layouts/boilerplate') %>
-<div class="d-flex flex-direction: column">
+<div class="card-container d-flex flex-direction: column">
   <div class="overflow-auto bg-light" style="max-height: 700px">
     <div
-      class="dark-green d-flex justify-content-center align-items-center py-2 sticky-top"
+      class="dark-green d-flex justify-content-center align-items-center py-2"
     >
       <h4 class="text-white">Which Campsite is the best for you?</h4>
       <h3 class="ms-4">
@@ -53,51 +53,53 @@
 </div>
 
 <a id="whyCamp"></a>
-<div class="why-camp-wrap d-flex justify-content-start">
+<div class="why-camp-wrap d-flex">
   <div class="why-camp text-white d-flex flex-direction: row text-center">
-    <h2 class="mt-4">why is camping good for you?</h2>
-    <p id="coinGecko">
-      <script>
-        axios
-          .get(
-            "https://api.coingecko.com/api/v3/simple/price?ids=binaryx,cyberdragon-gold&vs_currencies=usd"
-          )
-          .then((res) => {
-            // console.log("RESPONSE: ", res);
-            // console.log("RESPONSE DATA: ", res.data);
-            document.getElementById("coinGecko").innerHTML =
-              res.data.binaryx.usd;
-          });
-      </script>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-      facilis, aperiam esse, ducimus ipsa sint incidunt nisi cupiditate dolorum,
-      quae illo blanditiis architecto sapiente asperiores repellat amet nihil
-      itaque libero?
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-      facilis, aperiam esse, ducimus ipsa sint incidunt nisi cupiditate dolorum,
-      quae illo blanditiis architecto sapiente asperiores repellat amet nihil
-      itaque libero?
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-      facilis, aperiam esse, ducimus ipsa sint incidunt nisi cupiditate dolorum,
-      quae illo blanditiis architecto sapiente asperiores repellat amet nihil
-      itaque libero?
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-      facilis, aperiam esse, ducimus ipsa sint incidunt nisi cupiditate dolorum,
-      quae illo blanditiis architecto sapiente asperiores repellat amet nihil
-      itaque libero?
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-      facilis, aperiam esse, ducimus ipsa sint incidunt nisi cupiditate dolorum,
-      quae illo blanditiis architecto sapiente asperiores repellat amet nihil
-      itaque libero?
-    </p>
+    <div class="camping-reasons">
+      <h2 class="mt-4">why is camping good for you?</h2>
+      <p id="coinGecko">
+        <script>
+          axios
+            .get(
+              "https://api.coingecko.com/api/v3/simple/price?ids=binaryx,cyberdragon-gold&vs_currencies=usd"
+            )
+            .then((res) => {
+              // console.log("RESPONSE: ", res);
+              // console.log("RESPONSE DATA: ", res.data);
+              document.getElementById("coinGecko").innerHTML =
+                res.data.binaryx.usd;
+            });
+        </script>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+        facilis, aperiam esse, ducimus ipsa sint incidunt nisi cupiditate
+        dolorum, quae illo blanditiis architecto sapiente asperiores repellat
+        amet nihil itaque libero?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+        facilis, aperiam esse, ducimus ipsa sint incidunt nisi cupiditate
+        dolorum, quae illo blanditiis architecto sapiente asperiores repellat
+        amet nihil itaque libero?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+        facilis, aperiam esse, ducimus ipsa sint incidunt nisi cupiditate
+        dolorum, quae illo blanditiis architecto sapiente asperiores repellat
+        amet nihil itaque libero?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+        facilis, aperiam esse, ducimus ipsa sint incidunt nisi cupiditate
+        dolorum, quae illo blanditiis architecto sapiente asperiores repellat
+        amet nihil itaque libero?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+        facilis, aperiam esse, ducimus ipsa sint incidunt nisi cupiditate
+        dolorum, quae illo blanditiis architecto sapiente asperiores repellat
+        amet nihil itaque libero?
+      </p>
+    </div>
   </div>
 </div>
 

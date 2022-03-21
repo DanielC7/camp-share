@@ -42,18 +42,35 @@ a {
 .why-camp-wrap {
   /* padding: 300px; */
   /* opacity: 0.8; */
-  height: 800px;
+  /* height: 800px; */
+  /* justify-content-start */
+  justify-content: start;
   background-image: url(https://images.unsplash.com/photo-1563299796-17596ed6b017?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80);
   background-position: center center;
   background-size: cover;
 }
 
 .why-camp {
-  width: 45%;
+  width: 60%;
   background-color: rgba(45, 43, 46, 0.63);
   /* height: 300px; */
 }
 
 .footer-top {
   min-height: 100px;
+}
+
+@media (max-width: 800px) {
+  #cluster-map {
+    display: none;
+  }
+  .card-container {
+    justify-content: center;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-content: center; */
+  }
+  .why-camp-wrap {
+    justify-content: center;
+  }
 }
